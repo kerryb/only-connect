@@ -1,9 +1,11 @@
-guard :sass, :input => "css"
+guard :coffeescript, input: "src/coffee", output: "public/js", run_at_start: true
 
-guard :coffeescript, :input => "js"
+guard :haml, input: "src/haml", output: "public", run_at_start: true
+
+guard :sass, input: "src/scss", output: "public/css", run_at_start: true
 
 guard :livereload do
-  watch(%r{^css/.+\.css$})
-  watch(%r{^js/.+\.js$})
-  watch(%r{\.html$})
+  watch "public"
 end
+
+notification :growl
