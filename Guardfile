@@ -1,4 +1,5 @@
 guard :copy, from: "src/css", to: "public/css", run_at_start: true, mkpath: true
+guard :copy, from: "src/img", to: "public/img", run_at_start: true, mkpath: true
 guard :copy, from: "src/js", to: "public/js", run_at_start: true, mkpath: true
 
 guard :coffeescript, input: "src/coffeescript", output: "public/js", all_on_start: true, source_map: true
