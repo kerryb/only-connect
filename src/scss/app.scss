@@ -1,7 +1,5 @@
 @import "bourbon/bourbon";
 
-$option-colour: #08336a;
-
 #only-connect {
   padding: 0px;
   margin: 0px;
@@ -33,11 +31,15 @@ $option-colour: #08336a;
   }
 
   .question-choice {
+    $panel-colour: rgba(136, 215, 239, 0.5);
+    $option-colour: #08336a;
+
     width: 100%;
     position: absolute;
     bottom: 100px;
     padding: 50px 0;
-    background-color: rgba(136, 215, 239, 0.5);
+    background-color: $panel-colour;
+    @include box-shadow(0 0 20px darken($panel-colour, 50%));
 
     .row {
       text-align: center;
