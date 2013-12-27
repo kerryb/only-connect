@@ -1,5 +1,6 @@
 source "https://rubygems.org"
 
+gem "bourbon"
 gem "growl"
 gem "guard"
 gem "guard-coffeescript"
