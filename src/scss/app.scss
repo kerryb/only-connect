@@ -1,6 +1,9 @@
 @import "bourbon/bourbon";
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:700);
 
 #only-connect {
+  font-family: 'PT Sans', sans-serif;
+
   padding: 0px;
   margin: 0px;
   width: 100%;
