@@ -39,7 +39,7 @@
     bottom: 100px;
     padding: 50px 0;
     background-color: $panel-colour;
-    @include box-shadow(0 0 20px darken($panel-colour, 50%));
+    box-shadow: 0 0 20px darken($panel-colour, 50%);
 
     .row {
       text-align: center;
@@ -51,7 +51,7 @@
         margin: 10px;
         padding: 10px;
         @include linear-gradient(left, $option-colour, lighten($option-colour, 10%), $option-colour);
-        @include box-shadow(5px 5px 10px darken($option-colour, 10%));
+        box-shadow: 5px 5px 10px darken($option-colour, 10%);
         color: white;
         font-size: 90px;
         line-height: 150px;
