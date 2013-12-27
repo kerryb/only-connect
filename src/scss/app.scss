@@ -42,19 +42,26 @@
     box-shadow: 0 0 20px darken($panel-colour, 50%);
 
     .row {
+      display: block;
+      margin: auto;
       text-align: center;
 
       .option {
         display: inline-block;
         width: 200px;
         height: 150px;
-        margin: 10px;
-        padding: 10px;
+        margin: 20px;
+        line-height: 150px;
+        text-align: center;
         @include linear-gradient(left, $option-colour, lighten($option-colour, 10%), $option-colour);
         box-shadow: 5px 5px 10px darken($option-colour, 10%);
-        color: white;
-        font-size: 90px;
-        line-height: 150px;
+
+        p {
+          display: inline-block;
+          vertical-align: middle; 
+          color: white;
+          font-size: 90px;
+        }
       }
     }
   }
