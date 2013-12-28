@@ -1,115 +1,106 @@
 @import "bourbon/bourbon";
 @import url(http://fonts.googleapis.com/css?family=PT+Sans:700);
 
+$panel-colour: rgba(255, 255, 255, 0.3);
+$option-colour: #08336a;
+$clue-colour: #6ec0e6;
+
+
 #only-connect {
   font-family: 'PT Sans', sans-serif;
-
   padding: 0px;
   margin: 0px;
   width: 100%;
   height: 100%;
   overflow: hidden;
 
-  .round {
+  .show-if-active {
     display: none;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    background-image: url('/img/background.png');
-    background-repeat: no-repeat;
-    background-size: cover;
 
     &.active {
       display: block;
     }
-
-    &#title {
-      background-image: url('/img/logo.png');
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
   }
 
-  .question-choice {
-    display: none;
-    $panel-colour: rgba(136, 215, 239, 0.5);
-    $option-colour: #08336a;
+  .fullscreen {
+    @extend .show-if-active;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
+  #title {
+    @extend .fullscreen;
+    background-image: url('/img/logo.png');
+  }
+
+  .round {
+    @extend .fullscreen;
+    background-image: url('/img/background.png');
+  }
+
+  .panel {
+    @extend .show-if-active;
     width: 100%;
     position: absolute;
     bottom: 100px;
     padding: 50px 0;
     background-color: $panel-colour;
     box-shadow: 0 0 20px darken($panel-colour, 50%);
+  }
 
-    &.active {
-      display: block;
+  .row {
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+
+  .item {
+    display: inline-block;
+    width: 200px;
+    height: 150px;
+    margin: 20px;
+    line-height: 150px;
+    text-align: center;
+    @include linear-gradient(left, $option-colour, lighten($option-colour, 10%), $option-colour);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+
+    p {
+      display: inline-block;
+      vertical-align: middle; 
+      color: white;
+      font-size: 90px;
     }
+  }
 
-    .row {
-      display: block;
-      margin: auto;
-      text-align: center;
+  .question-choice {
+    @extend .panel;
 
-      .option {
-        display: inline-block;
-        width: 200px;
-        height: 150px;
-        margin: 20px;
-        line-height: 150px;
-        text-align: center;
-        @include linear-gradient(left, $option-colour, lighten($option-colour, 10%), $option-colour);
-        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    .option {
+      @extend .item;
+      @include linear-gradient(left, $option-colour, lighten($option-colour, 10%), $option-colour);
+      margin: 20px;
 
-        p {
-          display: inline-block;
-          vertical-align: middle; 
-          color: white;
-          font-size: 90px;
-        }
+      p {
+        color: white;
+        font-size: 90px;
       }
     }
   }
 
   .clues {
-    $panel-colour: rgba(136, 215, 239, 0.5);
-    $question-colour: #6ec0e6;
+    @extend .panel;
 
-    display: none;
-    width: 100%;
-    position: absolute;
-    bottom: 100px;
-    padding: 50px 0;
-    background-color: $panel-colour;
-    box-shadow: 0 0 20px darken($panel-colour, 50%);
+    .clue {
+      @extend .item;
+      @include linear-gradient(left, $clue-colour, lighten($clue-colour, 10%), $clue-colour);
+      margin: 5px;
 
-    &.active {
-      display: block;
-    }
-
-    .row {
-      display: block;
-      margin: auto;
-      text-align: center;
-
-      .clue {
-        display: inline-block;
-        width: 200px;
-        height: 150px;
-        margin: 5px;
-        line-height: 150px;
-        text-align: center;
-        @include linear-gradient(left, $question-colour, lighten($question-colour, 10%), $question-colour);
-        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
-
-        p {
-          display: inline-block;
-          vertical-align: middle; 
-          font-size: 40px;
-        }
+      p {
+        font-size: 40px;
       }
     }
   }
