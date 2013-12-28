@@ -62,7 +62,7 @@
         line-height: 150px;
         text-align: center;
         @include linear-gradient(left, $option-colour, lighten($option-colour, 10%), $option-colour);
-        box-shadow: 5px 5px 10px darken($option-colour, 10%);
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
 
         p {
           display: inline-block;
@@ -103,7 +103,7 @@
         line-height: 150px;
         text-align: center;
         @include linear-gradient(left, $question-colour, lighten($question-colour, 10%), $question-colour);
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
 
         p {
           display: inline-block;
