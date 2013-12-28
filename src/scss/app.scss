@@ -68,6 +68,7 @@ $answer-colour: #08336a;
     text-align: center;
     @include linear-gradient(left, $option-colour, lighten($option-colour, 10%), $option-colour);
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
 
     p {
       display: inline-block;
@@ -105,13 +106,14 @@ $answer-colour: #08336a;
     }
 
     .answer {
-      width: 820px;
+      width: 825px;
       margin: 5px auto;
       padding: 10px;
       @include linear-gradient(left, $answer-colour, lighten($answer-colour, 10%), $answer-colour);
       box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
       color: white;
       font-size: 30px;
+      border-radius: 5px;
     }
   }
 }
