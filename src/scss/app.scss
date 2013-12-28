@@ -75,6 +75,7 @@ $timer-elapsed-colour: #08336a;
       display: inline-block;
       vertical-align: middle; 
       font-size: 90px;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
     }
   }
 
@@ -119,6 +120,7 @@ $timer-elapsed-colour: #08336a;
       p {
         position: relative;
         top: -40px;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
       }
     }
 
@@ -141,6 +143,10 @@ $timer-elapsed-colour: #08336a;
       color: white;
       font-size: 30px;
       border-radius: 5px;
+
+      p {
+        text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
+      }
     }
   }
 }
