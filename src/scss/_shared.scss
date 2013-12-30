@@ -41,7 +41,7 @@ $timer-elapsed-colour: #08336a;
   text-align: center;
 }
 
-@mixin item {
+@mixin display-box {
   display: inline-block;
   width: 200px;
   height: 150px;

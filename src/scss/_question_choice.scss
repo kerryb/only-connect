@@ -2,7 +2,7 @@
   @include panel;
 
   .option {
-    @include item;
+    @include display-box;
     @include linear-gradient(left, $option-colour, lighten($option-colour, 10%), $option-colour);
     margin: 20px;
 

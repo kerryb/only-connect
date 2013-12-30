@@ -36,7 +36,7 @@
 }
 
 .clue {
-  @include item;
+  @include display-box;
   @include linear-gradient(left, $clue-colour, lighten($clue-colour, 10%), $clue-colour);
   margin: 5px;
 
