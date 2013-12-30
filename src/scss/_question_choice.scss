@@ -2,13 +2,6 @@
   @include panel;
 
   .option {
-    @include display-box;
-    @include linear-gradient(left, $option-colour, lighten($option-colour, 10%), $option-colour);
-    margin: 20px;
-
-    p {
-      color: white;
-      font-size: 90px;
-    }
+    @include display-box(200px, 20px, 90px, $option-colour, white);
   }
 }

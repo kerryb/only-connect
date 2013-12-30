@@ -6,7 +6,7 @@
     %link{rel: "stylesheet", href: "css/app.css", type: "text/css"}
   %body#only-connect
     .screen#title
-    .screen.active#round-1
+    .screen#connections
       .question-choice
         .row
           .option#two-reeds
@@ -22,7 +22,7 @@
             %p &#78359;
           .option#eye-of-horus
             %p &#77952;
-      .clues.active
+      .clues
         .row
           .timer
             .elapsed
@@ -39,6 +39,51 @@
         .row
           .answer
             %p This is the answer
+
+    .screen#connecting-wall.active
+      .question-choice
+        .row
+          .option#lion
+            %p &#78061;
+          .option#water
+            %p &#78359;
+      .clues.active
+        .row
+          .clue
+            %p A
+          .clue
+            %p B
+          .clue
+            %p C
+          .clue
+            %p D
+        .row
+          .clue
+            %p E
+          .clue
+            %p F
+          .clue
+            %p G
+          .clue
+            %p H
+        .row
+          .clue
+            %p I
+          .clue
+            %p Just checking
+          .clue
+            %p K
+          .clue
+            %p L
+        .row
+          .clue
+            %p M
+          .clue
+            %p N
+          .clue
+            %p O
+          .clue
+            %p P
 
     %script{type:"text/javascript", src: "//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"}
     %script{type:"text/javascript", src: "js/app.js"}
