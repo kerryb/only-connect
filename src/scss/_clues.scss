@@ -10,30 +10,7 @@
   }
 
   .timer {
-    width: 200px;
-    margin: 5px auto;
-    position: relative;
-    left: -320px;
-    height: 40px;
-    line-height: 40px;
-    font-size: 30px;
-    color: white;
-    @include linear-gradient(left, $timer-remaining-colour, lighten($timer-remaining-colour, 10%), $timer-remaining-colour);
-    @include rounded-box-with-shadow;
-    overflow: hidden;
-
-    .elapsed {
-      height: 100%;
-      width: 50%;
-      @include linear-gradient(left, $timer-elapsed-colour, lighten($timer-elapsed-colour, 10%), $timer-elapsed-colour);
-    }
-
-    p {
-      position: relative;
-      top: -40px;
-      margin: 0;
-      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
-    }
+    @include timer(200px, 40px, -320px);
   }
 
   .clue {
@@ -51,12 +28,30 @@
     font-size: 30px;
 
     p {
+      margin: 0;
       text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
     }
   }
 }
 
 #connecting-wall {
+  .lives {
+    display: inline-block;
+    width: 150px;
+    margin: 5px 0;
+  }
+
+  .life {
+    display: inline-block;
+    width: 40px;
+    height: 33px;
+    background-image: url('/img/life.png');
+  }
+
+  .timer {
+    @include timer(480px, 20px, 5px);
+  }
+
   .clues {
     @include panel(50px);
   }
