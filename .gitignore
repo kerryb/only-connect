@@ -3,4 +3,4 @@ public
 .bundle
 bin
 log
-tmp/pids
+tmp/*
