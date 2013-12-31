@@ -1,13 +1,4 @@
-@mixin show-if-active {
-  display: none;
-
-  &.active {
-    display: block;
-  }
-}
-
 @mixin fullscreen {
-  @include show-if-active;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -17,7 +8,6 @@
 }
 
 @mixin panel($from-bottom: 100px) {
-  @include show-if-active;
   width: 100%;
   position: absolute;
   bottom: $from-bottom;

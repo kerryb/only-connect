@@ -4,10 +4,10 @@
     %title Only Connect
     %link{rel: "icon", href: "img/favicon.ico", type: "image/vnd.microsoft.icon"}
     %link{rel: "stylesheet", href: "css/app.css", type: "text/css"}
-  %body#only-connect
-    .screen#title
-    .screen#connections
-      .question-choice
+  %body#only-connect{"ng-app" => "onlyConnectApp", "ng-controller" => "GameCtrl", "ng-keypress" => "advance()"}
+    .screen#title{"ng-controller" => "TitleCtrl", "ng-show" => "show()" }
+    .screen#connections{"ng-controller" => "ConnectionsCtrl", "ng-show" => "show()" }
+      .question-choice{"ng-show" => "showQuestionChoice()"}
         .row
           .option#two-reeds
             %p &#78284;
@@ -22,7 +22,7 @@
             %p &#78359;
           .option#eye-of-horus
             %p &#77952;
-      .clues
+      .clues{"ng-show" => "showClues()"}
         .row
           .timer
             .elapsed
@@ -40,14 +40,14 @@
           .answer
             %p This is the answer
 
-    .screen#connecting-wall.active
-      .question-choice
+    .screen#connecting-wall{"ng-controller" => "ConnectingWallCtrl", "ng-show" => "show()" }
+      .question-choice{"ng-show" => "showQuestionChoice()"}
         .row
           .option#lion
             %p &#78061;
           .option#water
             %p &#78359;
-      .clues.active
+      .clues{"ng-show" => "showClues()"}
         .row
           .clue
             %p A
@@ -91,6 +91,5 @@
             .life
           .timer
             .elapsed
-
-    %script{type:"text/javascript", src: "//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"}
+    %script{type:"text/javascript", src: "//ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"}
     %script{type:"text/javascript", src: "js/app.js"}
