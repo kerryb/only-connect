@@ -1,10 +1,15 @@
-FileUtils.mkdir_p "tmp/coffeescript" # coffeedripper doesn't have a mkpath option
+coffeescript_sources = %w[onlyConnectApp.coffee controllers].map {|f|
+  "src/coffeescript/#{f}"
+}
+coffescript_command = "coffee -cmj public/js/app.js #{coffeescript_sources.join " "}"
+
+system coffescript_command # guard:process doesn't run at start
 
 guard :copy, from: "src/img", to: "public/img", run_at_start: true, mkpath: true
 
-guard :coffeedripper, input: "src/coffeescript", output: "tmp/coffeescript", run_at_start: true
-
-guard :coffeescript, input: "tmp/coffeescript", output: "public/js", all_on_start: true, source_map: true
+guard :process, name: "coffeescript", command: coffescript_command do
+  watch %r{^src/coffeescript}
+end
 
 guard :haml, input: "src/haml", output: "public", run_at_start: true
 

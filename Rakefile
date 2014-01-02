@@ -3,11 +3,11 @@ Bundler.setup
 require "guard"
 require "rake/clean"
 
-CLEAN << FileList["public/**"]
-CLEAN << FileList["log/**"]
+CLOBBER << FileList["public/**"]
+CLEAN << FileList["log/**", "tmp/**"]
 
 desc "Create site in public directory"
-task :default do
+task :default => :clobber do
   Guard.setup
   Guard.guards("copy").map(&:start) # guard:copy only sets itself up on start
   Guard.run_all
