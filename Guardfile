@@ -6,6 +6,7 @@ coffescript_command = "coffee -cmj public/js/app.js #{coffeescript_sources.join 
 system coffescript_command # guard:process doesn't run at start
 
 guard :copy, from: "src/img", to: "public/img", run_at_start: true, mkpath: true
+guard :copy, from: "src/fonts", to: "public/fonts", run_at_start: true, mkpath: true
 
 guard :process, name: "coffeescript", command: coffescript_command do
   watch %r{^src/coffeescript}
