@@ -23,3 +23,8 @@ desc "Stop the thin server"
 task :stop do
   system "bundle exec thin stop"
 end
+
+desc "Deploy to oc.kerryb.org"
+task :deploy do
+  system "rsync -avz public/ kerry_ps@ps10723.dreamhost.com:oc.kerryb.org"
+end
