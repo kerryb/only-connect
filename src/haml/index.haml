@@ -4,24 +4,19 @@
     %title Only Connect
     %link{rel: "icon", href: "img/favicon.ico", type: "image/vnd.microsoft.icon"}
     %link{rel: "stylesheet", href: "css/app.css", type: "text/css"}
-  %body#only-connect{"ng-app" => "onlyConnectApp", "ng-controller" => "GameCtrl", "ng-keypress" => "advance()"}
+  %body#only-connect{"ng-app" => "onlyConnectApp", "ng-controller" => "GameCtrl",
+    "ng-click" => "advance()", "ng-keypress" => "advance()"}
     .screen#title{"ng-controller" => "TitleCtrl", "ng-show" => "show()" }
     .screen#connections{"ng-controller" => "ConnectionsCtrl", "ng-show" => "show()" }
       .question-choice{"ng-show" => "showQuestionChoice()"}
         .row
           .option#two-reeds
-            %p &#78284;
           .option#lion
-            %p &#78061;
           .option#twisted-flax
-            %p &#78747;
         .row
           .option#horned-viper
-            %p &#78225;
           .option#water
-            %p &#78359;
           .option#eye-of-horus
-            %p &#77952;
       .clues{"ng-show" => "showClues()"}
         .row
           .timer
@@ -44,9 +39,7 @@
       .question-choice{"ng-show" => "showQuestionChoice()"}
         .row
           .option#lion
-            %p &#78061;
           .option#water
-            %p &#78359;
       .clues{"ng-show" => "showClues()"}
         .row
           .clue

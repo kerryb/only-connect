@@ -2,6 +2,29 @@
   @include panel;
 
   .option {
-    @include display-box(200px, 20px, 90px, $option-colour, white);
+    @include display-box(200px, 20px, 90px);
+
+    @mixin question-choice($hieroglyph) {
+      @include background(url(/img/#{$hieroglyph}.png) no-repeat center center, linear-gradient(left, $option-colour, lighten($option-colour, 10%), $option-colour));
+    }
+
+    &#two-reeds {
+      @include question-choice(two-reeds);
+    }
+    &#lion {
+      @include question-choice(lion);
+    }
+    &#twisted-flax {
+      @include question-choice(twisted-flax);
+    }
+    &#horned-viper {
+      @include question-choice(horned-viper);
+    }
+    &#water {
+      @include question-choice(water);
+    }
+    &#eye-of-horus {
+      @include question-choice(eye-of-horus);
+    }
   }
 }

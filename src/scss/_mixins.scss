@@ -22,14 +22,13 @@
   text-align: center;
 }
 
-@mixin display-box($width, $margin, $font-size, $background-colour, $text-colour) {
+@mixin display-box($width, $margin, $font-size) {
   $height: $width * 0.75;
   display: inline-block;
   width: $width;
   height: $height;
   margin: $margin;
   line-height: $height;
-  @include linear-gradient(left, $background-colour, lighten($background-colour, 10%), $background-colour);
   @include rounded-box-with-shadow;
 
   p {
@@ -38,7 +37,6 @@
     margin: 0;
     font-size: $font-size;
     line-height: normal;
-    color: $text-colour;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
   }
 }

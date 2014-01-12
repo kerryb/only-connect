@@ -14,7 +14,8 @@
   }
 
   .clue {
-    @include display-box(200px, 5px, 30px, $clue-colour, black);
+    @include display-box(200px, 5px, 30px);
+    @include linear-gradient(left, $clue-colour, lighten($clue-colour, 10%), $clue-colour);
   }
 
   .answer {
@@ -57,6 +58,7 @@
   }
 
   .clue {
-    @include display-box(150px, 5px, 30px, $clue-colour, black);
+    @include display-box(150px, 5px, 30px);
+    @include linear-gradient(left, $clue-colour, lighten($clue-colour, 10%), $clue-colour);
   }
 }
