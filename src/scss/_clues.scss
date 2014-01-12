@@ -61,4 +61,24 @@
     @include display-box(150px, 5px, 30px);
     @include linear-gradient(left, $clue-colour, lighten($clue-colour, 10%), $clue-colour);
   }
+
+  .row.solved {
+    color: white;
+
+    &.row-1 .clue {
+      @include linear-gradient(left, $solved-1-colour, lighten($solved-1-colour, 10%), $solved-1-colour);
+    }
+
+    &.row-2 .clue {
+      @include linear-gradient(left, $solved-2-colour, lighten($solved-2-colour, 10%), $solved-2-colour);
+    }
+
+    &.row-3 .clue {
+      @include linear-gradient(left, $solved-3-colour, lighten($solved-3-colour, 10%), $solved-3-colour);
+    }
+
+    &.row-4 .clue {
+      @include linear-gradient(left, $solved-4-colour, lighten($solved-4-colour, 10%), $solved-4-colour);
+    }
+  }
 }
