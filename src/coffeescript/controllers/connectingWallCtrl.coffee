@@ -1,6 +1,6 @@
 app.controller "ConnectingWallCtrl", ($scope) ->
   $scope.show = ->
-    3 <= @currentScreen <= 5
+    3 <= @currentScreen <= 6
 
   $scope.showQuestionChoice = ->
     @currentScreen == 3
@@ -10,3 +10,6 @@ app.controller "ConnectingWallCtrl", ($scope) ->
 
   $scope.showAnswers = ->
     @currentScreen == 5
+
+  $scope.showConnection = ->
+    @currentScreen == 6

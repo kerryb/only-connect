@@ -17,22 +17,6 @@
     @include display-box(200px, 5px, 30px);
     @include linear-gradient(left, $clue-colour, lighten($clue-colour, 10%), $clue-colour);
   }
-
-  .answer {
-    width: 842px;
-    height: 40px;
-    margin: 5px auto;
-    line-height: 40px;
-    @include linear-gradient(left, $answer-colour, lighten($answer-colour, 10%), $answer-colour);
-    @include rounded-box-with-shadow;
-    color: white;
-    font-size: 30px;
-
-    p {
-      margin: 0;
-      text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
-    }
-  }
 }
 
 #connecting-wall {
@@ -80,5 +64,25 @@
     &.row-4 .clue {
       @include linear-gradient(left, $solved-4-colour, lighten($solved-4-colour, 10%), $solved-4-colour);
     }
+
+    &.connections .clue {
+      @include display-box(200px, 5px, 30px);
+    }
+  }
+}
+
+.answer {
+  width: 842px;
+  height: 40px;
+  margin: 5px auto;
+  line-height: 40px;
+  @include linear-gradient(left, $answer-colour, lighten($answer-colour, 10%), $answer-colour);
+  @include rounded-box-with-shadow;
+  color: white;
+  font-size: 30px;
+
+  p {
+    margin: 0;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
   }
 }

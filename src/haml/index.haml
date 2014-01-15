@@ -121,5 +121,20 @@
             %p O
           .clue
             %p P
+
+      .clues{"ng-show" => "showConnection()"}
+        .row.row-2.solved.connections
+          .clue
+            %p E
+          .clue
+            %p F
+          .clue
+            %p G
+          .clue
+            %p H
+        .row
+          .answer
+            %p This is the answer
+
     %script{type:"text/javascript", src: "js/angular.min.js"}
     %script{type:"text/javascript", src: "js/app.js"}
