@@ -1,7 +1,7 @@
 coffeescript_sources = %w[onlyConnectApp.coffee controllers].map {|f|
   "src/coffeescript/#{f}"
 }
-coffescript_command = "coffee -cmj public/js/app.js #{coffeescript_sources.join " "}"
+coffescript_command = "coffee -cj public/js/app.js #{coffeescript_sources.join " "}"
 
 system coffescript_command # guard:process doesn't run at start
 
