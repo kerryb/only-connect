@@ -1,9 +1,9 @@
 app.controller "ConnectionsCtrl", ($scope) ->
   $scope.show = ->
-    1 <= @currentScreen <= 2
+    1 <= @currentScreen <= 3
 
   $scope.showQuestionChoice = ->
-    @currentScreen == 1
+    @currentScreen == 2
 
   $scope.showClues = ->
-    @currentScreen == 2
+    @currentScreen == 3

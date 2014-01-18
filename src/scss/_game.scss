@@ -15,6 +15,18 @@
     background-image: url('/img/background.png');
   }
 
+  .animate-show {
+    @include transition(opacity ease-in-out 1s);
+
+    .ng-hide-add, .ng-hide-remove {
+      display: block!important;
+    }
+
+    .ng-hide {
+      opacity: 0;
+    }
+  }
+
   @import "question_choice";
   @import "clues";
 }
