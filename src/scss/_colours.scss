@@ -6,5 +6,7 @@ $solved-2-colour: #008670;
 $solved-3-colour: #930749;
 $solved-4-colour: #245991;
 $answer-colour: #08336a;
+$category-colour: $answer-colour;
+$missing-vowel-text-colour: darken($answer-colour, 10%);
 $timer-remaining-colour: #186491;
 $timer-elapsed-colour: #08336a;

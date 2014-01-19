@@ -142,6 +142,14 @@
             .answer
               %p This is the answer
 
+      #missing-vowels.animate-show{"ng-controller" => "MissingVowelsCtrl", "ng-show" => "show()" }
+        .category
+          %p Only Connect rounds
+        .clue{"ng-show" => "showClue()"}
+          %p MSS NGV WLS
+        .clue.solved{"ng-show" => "showAnswer()"}
+          %p MISSING VOWELS
+
     %script{type:"text/javascript", src: "js/angular.min.js"}
     %script{type:"text/javascript", src: "js/angular-animate.js"}
     %script{type:"text/javascript", src: "js/app.js"}

@@ -72,18 +72,56 @@
   }
 }
 
-.answer {
-  width: 842px;
-  height: 40px;
-  margin: 5px auto;
-  line-height: 40px;
-  @include linear-gradient(left, $answer-colour, lighten($answer-colour, 10%), $answer-colour);
-  @include rounded-box-with-shadow;
-  color: white;
-  font-size: 30px;
+#connections, #connecting-wall {
+  .answer {
+    width: 842px;
+    height: 40px;
+    margin: 5px auto;
+    line-height: 40px;
+    @include linear-gradient(left, $answer-colour, lighten($answer-colour, 10%), $answer-colour);
+    @include rounded-box-with-shadow;
+    color: white;
+    font-size: 30px;
 
-  p {
-    margin: 0;
-    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
+    p {
+      margin: 0;
+      text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
+    }
+  }
+}
+
+#missing-vowels {
+  @include panel;
+
+  .category {
+    width: 842px;
+    height: 40px;
+    margin: 5px auto;
+    line-height: 40px;
+    @include linear-gradient(left, $category-colour, lighten($category-colour, 10%), $category-colour);
+    @include rounded-box-with-shadow;
+    color: white;
+    font-size: 30px;
+
+    p {
+      margin: 0;
+      text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
+    }
+  }
+
+  .clue {
+    width: 842px;
+    height: 60px;
+    margin: 5px auto;
+    line-height: 60px;
+    @include linear-gradient(left, $clue-colour, lighten($clue-colour, 10%), $clue-colour);
+    @include rounded-box-with-shadow;
+    color: $missing-vowel-text-colour;
+    font-size: 40px;
+
+    p {
+      margin: 0;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+    }
   }
 }
