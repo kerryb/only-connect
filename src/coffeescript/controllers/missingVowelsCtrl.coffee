@@ -1,9 +1,9 @@
 app.controller "MissingVowelsCtrl", ($scope) ->
   $scope.show = ->
-    10 <= @currentScreen <= 12
+    11 <= @currentScreen <= 13
 
   $scope.showClue = ->
-    @currentScreen == 11
+    @currentScreen == 12
 
   $scope.showAnswer = ->
-    @currentScreen == 12
+    @currentScreen == 13
