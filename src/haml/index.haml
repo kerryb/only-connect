@@ -4,10 +4,13 @@
     %title Only Connect
     %link{rel: "icon", href: "img/favicon.ico", type: "image/vnd.microsoft.icon"}
     %link{rel: "stylesheet", href: "css/app.css", type: "text/css"}
+    %script{type:"text/javascript", src: "js/angular.min.js"}
+    %script{type:"text/javascript", src: "js/angular-animate.js"}
+    %script{type:"text/javascript", src: "js/app.js"}
   %body#only-connect{"ng-app" => "onlyConnectApp", "ng-controller" => "GameCtrl",
     "ng-click" => "advance()", "ng-keypress" => "advance()"}
     .screen#title{"ng-hide" => "inGame()" }
-    .screen#game{"ng-show" => "inGame()" }
+    .screen#game{"ng-cloak" => true, "ng-show" => "inGame()" }
       #connections.animate-show{"ng-controller" => "ConnectionsCtrl", "ng-show" => "show()" }
         .question-choice.animate-show{"ng-show" => "showQuestionChoice()"}
           .row
@@ -149,7 +152,3 @@
           %p MSS NGV WLS
         .clue.solved{"ng-show" => "showAnswer()"}
           %p MISSING VOWELS
-
-    %script{type:"text/javascript", src: "js/angular.min.js"}
-    %script{type:"text/javascript", src: "js/angular-animate.js"}
-    %script{type:"text/javascript", src: "js/app.js"}
