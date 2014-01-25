@@ -1,0 +1,106 @@
+#connecting-wall
+  .question-choice.animate-show{"ng-show" => "showQuestionChoice()"}
+    .row
+      .option#lion
+      .option#water
+  .clues.animate-show{"ng-show" => "showClues()"}
+    .row
+      .clue
+        %p A
+      .clue
+        %p B
+      .clue
+        %p C
+      .clue
+        %p D
+    .row
+      .clue
+        %p E
+      .clue
+        %p F
+      .clue
+        %p G
+      .clue
+        %p H
+    .row
+      .clue
+        %p I
+      .clue
+        %p Just checking
+      .clue
+        %p K
+      .clue
+        %p L
+    .row
+      .clue
+        %p M
+      .clue
+        %p N
+      .clue
+        %p O
+      .clue
+        %p P
+    .row
+      .lives
+        .life
+        .life
+        .life
+      .timer
+        .elapsed
+
+  .clues.animate-show{"ng-show" => "showAnswers()"}
+    .row.row-1.solved
+      .clue
+        %p A
+      .clue
+        %p B
+      .clue
+        %p C
+      .clue
+        %p D
+    .row.row-2.solved
+      .clue
+        %p E
+      .clue
+        %p F
+      .clue
+        %p G
+      .clue
+        %p H
+    .row.row-3.solved
+      .clue
+        %p I
+      .clue
+        %p Just checking
+      .clue
+        %p K
+      .clue
+        %p L
+    .row.row-4.solved
+      .clue
+        %p M
+      .clue
+        %p N
+      .clue
+        %p O
+      .clue
+        %p P
+    .row
+      .lives
+        .life
+      .timer
+        .elapsed
+
+  .clues.animate-show{"ng-show" => "showConnection()"}
+    .row.row-2.solved.connections
+      .clue
+        %p E
+      .clue
+        %p F
+      .clue
+        %p G
+      .clue
+        %p H
+    .row.animate-show{"ng-show" => "showAnswer()"}
+      .answer
+        %p This is the answer

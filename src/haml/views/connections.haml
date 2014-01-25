@@ -1,0 +1,27 @@
+#connections
+  .question-choice.animate-show{"ng-show" => "showQuestionChoice()"}
+    .row
+      .option#two-reeds
+      .option#lion
+      .option#twisted-flax
+    .row
+      .option#horned-viper
+      .option#water
+      .option#eye-of-horus
+  .clues.animate-show{"ng-show" => "showClues()"}
+    .row
+      .timer
+        .elapsed
+        %p 4 Points
+    .row
+      .clue#clue-1
+        %p Clue one
+      .clue#clue-2
+        %p Clue two
+      .clue#clue-3
+        %p Clue three
+      .clue#clue-4
+        %p Clue four has more words
+    .row
+      .answer
+        %p This is the answer

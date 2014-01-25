@@ -91,7 +91,11 @@
 }
 
 #missing-vowels {
-  @include panel;
+  @include fullscreen;
+
+  .clues {
+    @include panel(150px);
+  }
 
   .category {
     width: 842px;

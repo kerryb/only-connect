@@ -1,18 +1,15 @@
 app.controller "ConnectingWallCtrl", ($scope) ->
-  $scope.show = ->
-    4 <= @currentScreen <= 9
-
   $scope.showQuestionChoice = ->
-    @currentScreen == 5
+    true
 
   $scope.showClues = ->
-    @currentScreen == 6
+    false
 
   $scope.showAnswers = ->
-    @currentScreen == 7
+    false
 
   $scope.showConnection = ->
-    8 <= @currentScreen <= 9
+    false
 
   $scope.showAnswer = ->
-    @currentScreen == 9
+    false

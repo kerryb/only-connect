@@ -10,7 +10,7 @@
     background-image: url('/img/logo.png');
   }
 
-  .screen {
+  #connections, #connecting-wall, #missing-vowels {
     @include fullscreen;
     background-image: url('/img/background.png');
   }
