@@ -1,6 +1,8 @@
 source "https://rubygems.org"
 
 gem "bourbon"
+gem "capybara-webkit"
+gem "cucumber"
 gem "growl"
 gem "guard"
 gem "guard-copy"

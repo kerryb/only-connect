@@ -2,7 +2,7 @@
 # Generated on Sat Jan 25 2014 16:36:18 GMT+0000 (GMT)
 
 # base path, that will be used to resolve files and exclude
-basePath = "../.."
+basePath = ".."
 
 # list of files / patterns to load in the browser
 files = [
@@ -13,7 +13,7 @@ files = [
   "src/js/angular-route.js",
   "src/coffeescript/onlyConnectApp.coffee",
   "src/coffeescript/controllers/**/*.coffee",
-  "test/unit/**",
+  "spec/**",
 ]
 
 # list of files to exclude

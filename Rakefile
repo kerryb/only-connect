@@ -2,6 +2,8 @@ require "bundler"
 Bundler.setup
 require "guard"
 require "rake/clean"
+require 'cucumber'
+require 'cucumber/rake/task'
 
 CLOBBER << FileList["public/**"]
 CLEAN << FileList["log/**", "tmp/**"]
@@ -11,22 +13,19 @@ def system_or_fail command
 end
 
 desc "Create site in public directory"
-task :default => %i[clobber test:unit test:e2e] do
+task :default => %i[clobber karma cucumber] do
   Guard.setup
   Guard.guards("copy").map(&:start) # guard:copy only sets itself up on start
   Guard.run_all
 end
 
-namespace :test do
-  desc "Run unit tests"
-  task :unit do
-    system_or_fail "karma start config/karma/unit.coffee --no-auto-watch --single-run"
-  end
+desc "Run karma unit tests"
+task :karma do
+  system_or_fail "karma start config/karma.coffee --no-auto-watch --single-run"
+end
 
-  desc "Run unit tests"
-  task :e2e do
-    system_or_fail "karma start config/karma/e2e.coffee --no-auto-watch --single-run"
-  end
+Cucumber::Rake::Task.new(:cucumber) do |t|
+  t.cucumber_opts = "features --format pretty"
 end
 
 desc "Start a simple thin server for files in public directory"
