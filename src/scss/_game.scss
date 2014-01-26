@@ -15,6 +15,17 @@
     background-image: url('/img/background.png');
   }
 
+  .buttons {
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    text-align: center;
+
+    .button {
+      @include button(shiny, $start-button-colour);
+    }
+  }
+
   .animate-show {
     @include transition(opacity ease-in-out 1s);
 
