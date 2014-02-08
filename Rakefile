@@ -17,6 +17,7 @@ task :default => %i[clobber build karma cucumber]
 
 desc "Create site in public directory"
 task :build do
+  ENV["GUARD_NOTIFY"] = "false"
   Guard.setup
   Guard.guards("copy").map(&:start) # guard:copy only sets itself up on start
   Guard.run_all
