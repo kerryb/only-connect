@@ -2,6 +2,7 @@ source "https://rubygems.org"
 
 gem "bourbon"
 gem "capybara-webkit"
+gem "capybara-screenshot"
 gem "cucumber"
 gem "growl"
 gem "guard"

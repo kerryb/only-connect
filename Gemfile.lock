@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    addressable (2.3.5)
     bourbon (3.1.8)
       sass (>= 3.2.0)
       thor
@@ -11,6 +12,9 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    capybara-screenshot (0.3.16)
+      capybara (>= 1.0, < 3)
+      launchy
     capybara-webkit (1.1.1)
       capybara (>= 2.0.2, < 2.2.0)
       json
@@ -59,6 +63,8 @@ GEM
       tilt
     http_parser.rb (0.5.3)
     json (1.8.1)
+    launchy (2.4.2)
+      addressable (~> 2.3)
     libv8 (3.16.14.3)
     listen (2.4.0)
       celluloid (>= 0.15.2)
@@ -109,6 +115,7 @@ PLATFORMS
 
 DEPENDENCIES
   bourbon
+  capybara-screenshot
   capybara-webkit
   cucumber
   growl
