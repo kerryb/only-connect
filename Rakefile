@@ -12,8 +12,11 @@ def system_or_fail command
   system command or exit! 1
 end
 
+desc "Build and run all tests"
+task :default => %i[clobber build karma cucumber]
+
 desc "Create site in public directory"
-task :default => %i[clobber karma cucumber] do
+task :build do
   Guard.setup
   Guard.guards("copy").map(&:start) # guard:copy only sets itself up on start
   Guard.run_all
