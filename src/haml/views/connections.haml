@@ -1,11 +1,11 @@
 #connections
   .question-choice.animate-show{"ng-show" => "showQuestionChoice()"}
-    .option#two-reeds
-    .option#lion
-    .option#twisted-flax
-    .option#horned-viper
-    .option#water
-    .option#eye-of-horus
+    %a.option#two-reeds{href: "", "ng-click" => "chooseQuestion('two-reeds')"}
+    %a.option#lion{href: "", "ng-click" => "chooseQuestion('lion')"}
+    %a.option#twisted-flax{href: "", "ng-click" => "chooseQuestion('lion')"}
+    %a.option#horned-viper{href: "", "ng-click" => "chooseQuestion('horned-viper')"}
+    %a.option#water{href: "", "ng-click" => "chooseQuestion('water')"}
+    %a.option#eye-of-horus{href: "", "ng-click" => "chooseQuestion('eye-of-horus')"}
   .clues.animate-show{"ng-show" => "showClues()"}
     .row
       .timer

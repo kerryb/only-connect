@@ -1,6 +1,11 @@
 app.controller "ConnectionsCtrl", ($scope) ->
+  @playing = false
+
   $scope.showQuestionChoice = ->
-    true
+    not @playing
 
   $scope.showClues = ->
-    false
+    @playing
+
+  $scope.chooseQuestion = ->
+    @playing = true
