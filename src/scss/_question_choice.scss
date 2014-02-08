@@ -1,30 +1,38 @@
+$question-choice-width: 200px;
+$question-choice-height: $question-choice-width * 0.75;
+$question-choice-margin: 40px;
+
 .question-choice {
-  @include panel;
+  @include panel($height: ($question-choice-height + $question-choice-margin) * 2);
 
   .option {
-    @include display-box(200px, 20px, 90px);
+    @include display-box($question-choice-width, $question-choice-margin, 90px);
 
-    @mixin question-choice($hieroglyph) {
+    @mixin question-choice($hieroglyph, $row, $column) {
       @include background(url(/img/#{$hieroglyph}.png) no-repeat center center, linear-gradient(left, $option-colour, lighten($option-colour, 10%), $option-colour));
+      position: absolute;
+      top: $row * ($question-choice-height + $question-choice-margin);
+      left: 50%;
+      margin-left: ($column - 1) * ($question-choice-width + $question-choice-margin) - $question-choice-width * 0.5;
     }
 
     &#two-reeds {
-      @include question-choice(two-reeds);
+      @include question-choice(two-reeds, 0, 0);
     }
     &#lion {
-      @include question-choice(lion);
+      @include question-choice(lion, 0, 1);
     }
     &#twisted-flax {
-      @include question-choice(twisted-flax);
+      @include question-choice(twisted-flax, 0, 2);
     }
     &#horned-viper {
-      @include question-choice(horned-viper);
+      @include question-choice(horned-viper, 1, 0);
     }
     &#water {
-      @include question-choice(water);
+      @include question-choice(water, 1, 1);
     }
     &#eye-of-horus {
-      @include question-choice(eye-of-horus);
+      @include question-choice(eye-of-horus, 1, 2);
     }
   }
 }

@@ -39,7 +39,7 @@
   }
 
   .clues {
-    @include panel(50px);
+    @include panel($from-bottom: 50px);
   }
 
   .clue {
@@ -94,7 +94,7 @@
   @include fullscreen;
 
   .clues {
-    @include panel(150px);
+    @include panel($from-bottom: 150px);
   }
 
   .category {

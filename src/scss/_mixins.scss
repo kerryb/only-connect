@@ -7,8 +7,9 @@
   background-size: cover;
 }
 
-@mixin panel($from-bottom: 100px) {
+@mixin panel($height: auto, $from-bottom: 100px) {
   width: 100%;
+  height: $height;
   position: absolute;
   bottom: $from-bottom;
   padding: 20px 0;
