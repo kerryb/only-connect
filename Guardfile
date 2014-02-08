@@ -21,4 +21,4 @@ guard :livereload do
   watch %r{^public}
 end
 
-notification :growl
+notification :gntp
