@@ -1,4 +1,4 @@
-coffeescript_sources = %w[onlyConnectApp.coffee controllers].map {|f|
+coffeescript_sources = %w[onlyConnectApp.coffee services controllers].map {|f|
   "src/coffeescript/#{f}"
 }
 coffescript_command = "coffee -cj public/js/app.js #{coffeescript_sources.join " "}"
