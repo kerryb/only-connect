@@ -1,9 +1,0 @@
-{
-  "name": "onlyConnect",
-  "version": "0.0.1",
-  "author": "Kerry Buckley <kerryjbuckley@gmail.com>",
-  "description": "Only Connect rip-off game",
-  "devDependencies": {
-    "karma": "~0.8"
-  }
-}
