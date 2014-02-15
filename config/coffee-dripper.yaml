@@ -1,6 +1,0 @@
-app.coffee:
-  - onlyConnectApp.coffee
-  - gameCtrl.coffee
-  - titleCtrl.coffee
-  - connectionsCtrl.coffee
-  - connectingWallCtrl.coffee
