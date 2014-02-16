@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 gem "bourbon"
-gem "capybara-webkit"
+gem "poltergeist"
 gem "capybara-screenshot"
 gem "cucumber"
 gem "ruby_gntp"
