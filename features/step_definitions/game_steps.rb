@@ -1,5 +1,6 @@
 Given "a game has started" do
   visit "/"
+  p page.body
   click_link "Start game"
 end
 
