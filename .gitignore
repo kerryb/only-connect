@@ -4,3 +4,4 @@ public
 bin
 log
 tmp/*
+node_modules
