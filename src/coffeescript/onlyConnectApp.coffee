@@ -1,7 +1,6 @@
 app = angular.module("onlyConnectApp", ["ngAnimate", "ngRoute"]).config ["$routeProvider", ($routeProvider)->
   $routeProvider.when("/",
     templateUrl: "views/title.html"
-    controller: "TitleCtrl"
   ).when("/round/1",
     templateUrl: "views/connections.html"
     controller: "ConnectionsCtrl"
