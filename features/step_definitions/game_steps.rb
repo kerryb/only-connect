@@ -1,5 +1,6 @@
 Given "a game has started" do
   visit "/"
+  sleep 5
   click_link "Start game"
 end
 
