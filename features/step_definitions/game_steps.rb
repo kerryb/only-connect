@@ -1,4 +1,5 @@
 Given "a game has started" do
+  puts `find public -type f`
   visit "/"
   click_link "Start game"
 end
