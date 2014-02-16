@@ -5,4 +5,4 @@ before_script:
   - npm install karma
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
-script: xvfb_run bundle exec rake
+script: xvfb-run bundle exec rake
